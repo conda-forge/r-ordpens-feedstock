@@ -28,11 +28,15 @@ requirements:
     - r-rlrsim
     - r-grplasso
     - r-mgcv
+    - r-quadprog
+    - r-glmpath
   run:
     - r-base
     - r-rlrsim
     - r-grplasso
     - r-mgcv
+    - r-quadprog
+    - r-glmpath
 
 test:
   commands:
