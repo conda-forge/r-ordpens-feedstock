@@ -23,20 +23,23 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rlrsim
+    - r-glmpath
     - r-grplasso
     - r-mgcv
+    - r-ordinalnet
     - r-quadprog
-    - r-glmpath
   run:
     - r-base
     - r-rlrsim
+    - r-glmpath
     - r-grplasso
     - r-mgcv
+    - r-ordinalnet
     - r-quadprog
-    - r-glmpath
 
 test:
   commands:
@@ -54,7 +57,6 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - mfansler
 
 # Package: ordPens
 # Type: Package
